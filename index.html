@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>calculatrice</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculatrice">
+            <div class="result">
+                <p id="view">0</p>
+            </div>
+            <div class="key">
+                <div class="row">
+                    <button id="number1" onclick="pressKey(number1)">1</button>
+                    <button id="number2" onclick="pressKey(number2)">2</button>
+                    <button id="number3" onclick="pressKey(number3)">3</button>
+                    <button id="plus" onclick="pressKey(plus)">+</button>
+                </div>
+                <div class="row">
+                    <button id="number4" onclick="pressKey(number4)">4</button>
+                    <button id="number5" onclick="pressKey(number5)">5</button>
+                    <button id="number6" onclick="pressKey(number6)">6</button>
+                    <button id="moins" onclick="pressKey(moins)">-</button>
+                </div>
+                <div class="row">
+                    <button id="number7" onclick="pressKey(number7)">7</button>
+                    <button id="number8" onclick="pressKey(number8)">8</button>
+                    <button id="number9" onclick="pressKey(number9)">9</button>
+                    <button id="multiply" onclick="pressKey(multiply)">*</button>
+                </div>
+                <div class="row">
+                    <button id="number0" onclick="pressKey(number0)">0</button>
+                    <button id="separator" onclick="pressKey(separator)">.</button>
+                    <button id="del" onclick="deleteLastKey()">Del</button>
+                    <button id="divise" onclick="pressKey(divise)">/</button>
+                </div>
+                <div class="row">
+                    <button id="reset">CE</button>
+                    <button id="leftParenthesis" onclick="pressKey(leftParenthesis)">(</button>
+                    <button id="rightParenthesis" onclick="pressKey(rightParenthesis)">)</button>
+                    <button id="equal" onclick="calcul()">=</button>
+                </div>
+            </div>
+        </div>
+        <div class="explications">
+            <p id="content">explications</p>
+            <p class="content">Pour le HTML et CSS rien de complexe : <br>
+            - Chaque button a un id, j'écoute l'évènement onclick sur chaque button<br>
+            - Sur le button CE j'écoute l'évènement click côté Javascript, c'est mieux que de mettre du Javascript dans le HTML (addEventListener)<br>
+            - Les class row me permettent de gérer côté CSS les dimensions des boutons, les espaces entre eux, etc - Allez voir rien de complexe - <br>
+            - overflow  : hidden & text-overflow : ellipsis, me permet de gérer le débordement dans ma vue, genre 15 chiffres après la virgule<br>   
+            </p>
+        </div>
+    </div>
+    <script src="calculatrice.js"></script>
+</body>
+</html>
